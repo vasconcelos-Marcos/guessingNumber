@@ -1,13 +1,16 @@
 from random import randint
 
-n = randint(1, 100)
-palpite = -10
+def guess(limite):
+  n = randint(1, limite)
+  palpite = -10
+  
+  while(palpite != n):
+    palpite = int(input(f"Advinhe o valor de 1 a {limite}: "))
+    if palpite>n:
+      print("Tente um número menor!")
+    elif palpite<n:
+      print("Tente um número maior!")
+      
+  print(f"Parabéns! Você acertou o número {n}!")
 
-while(palpite != n):
-  palpite = int(input("Digite um valor de 1 a 100: "))
-  if palpite>n:
-    print("Tente um número menor!")
-  elif palpite<n:
-    print("Tente um número maior!")
-  else:
-    print("Parabéns! Você acertou!")
+guess(20)
