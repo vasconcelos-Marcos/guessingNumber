@@ -13,4 +13,4 @@ def guess(limite):
       
   print(f"Parabéns! Você acertou o número {n}!")
 
-guess(20)
+guess(5)
